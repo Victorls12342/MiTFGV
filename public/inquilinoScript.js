@@ -29,7 +29,7 @@ function getCookie(name) {
 
 async function getInquilino(id_inquilino) {
     try {
-        const res = await fetch(`/api/inquilino/${encodeURIComponent(id_inquilino)}`);
+        const res = await fetch(`/api/inquilinos/${encodeURIComponent(id_inquilino)}`);
         if (!res.ok) throw new Error(`Error en la solicitud: ${res.status}`);
         return await res.json();
     } catch (error) {
